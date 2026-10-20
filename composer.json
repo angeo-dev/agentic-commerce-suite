@@ -1,8 +1,8 @@
 {
     "name": "angeo/agentic-commerce-suite",
-    "description": "One install for the whole Angeo suite: makes a Magento 2 store readable, discoverable and usable by AI agents — llms.txt, AI-bot robots.txt, rich JSON-LD, AEO audit, OpenAI product feed, UCP profile, catalog and checkout, MCP server, MCP checkout and WebMCP.",
+    "description": "One install for the whole Angeo suite for Magento 2: makes a store readable, discoverable and usable by AI agents — llms.txt, AI-bot robots.txt, rich JSON-LD, AEO audit, AI brand visibility, AI product descriptions, OpenAI product feed, UCP profile, catalog and checkout, MCP server, MCP checkout and reorder, WebMCP and AI agent activity.",
     "type": "metapackage",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "license": "MIT",
     "keywords": [
         "magento2",
@@ -17,7 +17,11 @@
         "ai-agents",
         "hyva",
         "adobe-commerce",
-        "mage-os"
+        "mage-os",
+        "brand-visibility",
+        "b2b",
+        "reorder",
+        "product-descriptions"
     ],
     "homepage": "https://angeo.dev",
     "support": {
@@ -26,22 +30,24 @@
         "docs": "https://angeo.dev/modules/"
     },
     "require": {
+        "php": "~8.1.0||~8.2.0||~8.3.0||~8.4.0||~8.5.0",
+        "composer-runtime-api": "^2.2",
         "angeo/module-llms-txt": "^4.3.3",
         "angeo/module-robots-txt-aeo": "^4.0.1",
         "angeo/module-rich-data": "^2.0",
-        "angeo/module-aeo-audit": "^4.2.3",
-        "angeo/module-openai-product-feed": "^2.1",
+        "angeo/module-ai-description-updater": "^1.1.1",
+        "angeo/module-aeo-audit": "^4.3.2",
+        "angeo/module-aeo-brand-visibility": "^4.1",
+        "angeo/module-openai-product-feed": "^2.1.1",
         "angeo/module-openai-product-feed-api": "^2.0.1",
-        "angeo/module-ucp": "^2.2",
+        "angeo/module-ucp": "^2.2.1",
         "angeo/module-ucp-catalog": "^2.1.1",
         "angeo/module-ucp-checkout": "^1.1",
         "angeo/module-ucp-checkout-mcp": "^1.0",
-        "angeo/module-mcp-server": "^2.2.2",
+        "angeo/module-mcp-server": "^2.4",
         "angeo/module-mcp-checkout": "^2.1.3",
+        "angeo/module-mcp-reorder": "^1.0",
         "angeo/module-webmcp": "^1.0.1",
-        "angeo/module-agent-activity": "^1.0"
-    },
-    "suggest": {
-        "angeo/module-aeo-brand-visibility": "Track how AI answer engines mention your brand and competitors (needs your own AI provider API keys, so it is not installed by default)"
+        "angeo/module-agent-activity": "^1.1"
     }
 }
